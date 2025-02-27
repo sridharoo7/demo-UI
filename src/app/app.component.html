@@ -1,0 +1,81 @@
+<router-outlet></router-outlet>
+<app-grid [dataSource]="dataSource" [displayedColumns]="displayedColumns"></app-grid>
+
+<div class="main-container">
+    <mat-icon class="close-section" (click)="">close</mat-icon>
+    <div>
+        <p>Create Employee</p>
+    </div>
+    <div class="content">
+        <div class="container bottonborder" [formGroup]="">
+            <div class="section">
+                <mat-label class="title">Employee Details</mat-label>
+            </div>
+            <div class="rows">
+                <div class="halfrow">
+                    <div class="padtop">
+                        <mat-label>First Name</mat-label>
+                        <mat-icon matTooltip="First Name" [matTooltipPosition]="" class="tooltipsmaller">help</mat-icon>
+                    </div>
+                    <div class="padtop5">
+                        <input type="text" matInput id="fName" maxlength="25" minlength="3" placeholder="First Name"
+                            class="txtclass long inputgap" formControlName=""
+                            [ngClass]="{'error': ((fc.get('firstName')?.invalid && fc.get('firstName')?.touched))}" />
+                        <mat-error *ngIf="fc.get('firstName')?.hasError('required') && fc?.get('firstName')?.touched">
+                            First Name is Required
+                        </mat-error>
+                        <mat-error *ngIf="fc.get('firstName')?.hasError('string') && fc?.get('firstName')?.touched">
+                            First Name is should be a string
+                        </mat-error>
+                        <mat-error *ngIf="fc.get('firstName')?.hasError('minlength') && fc?.get('firstName')?.touched">
+                            First Name should be atleast of size 3
+                        </mat-error>
+                    </div>
+                </div>
+                <div class="halfrow">
+                    <div class="padtop">
+                        <mat-label>Last Name</mat-label>
+                        <mat-icon matTooltip="Last Name" [matTooltipPosition]="" class="tooltipsmaller">help</mat-icon>
+                    </div>
+                    <div class="padtop5">
+                        <input type="text" matInput id="lName" maxlength="25" minlength="3" placeholder="Last Name"
+                            class="txtclass long inputgap" formControlName=""
+                            [ngClass]="{'error': ((fc.get('lastName')?.invalid && fc.get('lastName')?.touched))}" />
+                        <mat-error *ngIf="fc.get('lastName')?.hasError('required') && fc?.get('lastName')?.touched">
+                            First Name is Required
+                        </mat-error>
+                        <mat-error *ngIf="fc.get('lastName')?.hasError('string') && fc?.get('lastName')?.touched">
+                            First Name is should be a string
+                        </mat-error>
+                        <mat-error *ngIf="fc.get('lastName')?.hasError('minlength') && fc?.get('lastName')?.touched">
+                            First Name should be atleast of size 3
+                        </mat-error>
+                    </div>
+                </div>
+            </div>
+            <div class="rows">
+                <div class="halfrow">
+                    <div class="padtop">
+                        <mat-label>Gender</mat-label>
+                        <mat-icon matTooltip="Last Name" [matTooltipPosition]="" class="tooltipsmaller">help</mat-icon>
+                    </div>
+                    <div class="padtop5">
+                        <mat-form-field class="width95">
+                            <mat-select placeholder="--Select--" formControlName="" >
+                                <mat-option value="">Select Gender</mat-option>
+                                <mat-option *ngFor="let gender of genders" [value]="gender.id">{{gender.type}}</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                        <mat-error *ngIf="fc?.get('gender')?.invalid && fc?.get('gender').touched">
+                            Gender selection is required
+                        </mat-error>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="buttonplacement">
+            <button [ngClass]="{'greyButton':fc.invalid, 'greenButton': !fc.invalid}" mat-button (click)="onSave()" [disabled]="fc.invalid">Save</button>
+        </div>
+    </div>
+</div>

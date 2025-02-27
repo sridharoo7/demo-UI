@@ -1,0 +1,674 @@
+.main-container {
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding-bottom: 50px;
+}
+
+
+
+.title {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 24px;
+    font-weight: 900;
+    color: black !important;
+    text-align: center;
+}
+
+
+
+.width50 {
+    padding-top: 30px;
+    width: 50%;
+}
+
+
+
+.backtitle {
+
+    padding-top: 20px;
+
+    padding-bottom: 20px;
+
+    font-size: 24px;
+
+    font-weight: 900;
+
+    color: #2d810e;
+
+    text-align: center;
+
+}
+
+
+
+.pointer {
+
+    cursor: pointer;
+
+}
+
+
+
+.greyButton {
+
+    color: grey;
+
+    width: 100px;
+
+    height: 40px;
+
+    cursor: pointer;
+
+}
+
+
+
+.greenButton {
+
+    color: white !important;
+
+    background-color: #2D810E !important;
+
+    width: 100px;
+
+    height: 40px;
+
+    cursor: pointer;
+
+}
+
+
+
+.alignarrow {
+
+    padding-top: 30px;
+
+    padding-right: 10px;
+
+    height: 65px;
+
+}
+
+
+
+.titleContainer {
+
+    display: flex;
+
+    justify-content: left;
+
+    height: 10%;
+
+    width: 65%;
+
+    margin: auto;
+
+}
+
+
+
+.rows {
+
+    display: flex;
+
+    gap: 5%;
+
+    width: 100%;
+
+}
+
+
+
+.halfrow {
+
+    gap: 10px;
+
+    width: 50%;
+
+}
+
+
+
+.padtop {
+
+    padding-top: 30px !important;
+
+    font-size: 16px;
+
+}
+
+
+
+.padtop5 {
+
+    padding-top: 5px;
+
+}
+
+
+
+.container {
+
+    width: 90%;
+
+    margin: auto;
+
+    content: relative;
+
+}
+
+
+
+.content {
+
+    display: block;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+    overflow-x: hidden;
+
+    height: 90%;
+
+    width: 100%;
+
+    margin: auto;
+
+    position: relative;
+
+    padding-bottom: 80px;
+
+}
+
+
+
+.section {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: baseline;
+
+    justify-content: center;
+
+    width: 100%;
+
+    height: 100%;
+
+    padding-top: 20px;
+
+    padding-bottom: 20px;
+
+    gap: 20px;
+
+}
+
+
+
+.short {
+
+    font-weight: 400 !important;
+
+    line-height: 2 !important;
+
+    color: #212529 !important;
+
+    background-color: #fff !important;
+
+    background-clip: padding-box !important;
+
+    border: 1px solid #ced4da !important;
+
+    -webkit-appearance: none !important;
+
+    appearance: none !important;
+
+    border-radius: .375rem !important;
+
+    height: 42px !important;
+
+    width: 75px !important;
+
+    text-align: center !important;
+
+}
+
+
+
+.buttonclass {
+
+    width: 100%;
+
+    height: 40px;
+
+    padding: 10px 20px 10px 20px;
+
+    border-radius: 8px;
+
+    border: 2px;
+
+    gap: 10px;
+
+    background: #EAF3E7 !important;
+
+    border: 2px solid #EAF3E7;
+
+    font-family: Mr George;
+
+    font-size: 15px;
+
+    font-weight: 900;
+
+    line-height: 19px;
+
+    letter-spacing: 0em;
+
+    text-align: center;
+
+    color: #2D810E !important;
+
+    padding-top: 10px;
+
+    cursor: pointer;
+
+}
+
+.header-title {
+
+    font-size: 18px !important;
+
+    font-weight: 900;
+
+    line-height: 51px;
+
+    text-align: center;
+
+    width: 100%;
+
+    margin-left: -64px;
+
+}
+
+.header-content {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 10px;
+
+    padding-bottom: 20px;
+
+    gap: 10px;
+
+    border-bottom: #99a0a6 1px solid;
+
+    position: relative;
+
+}
+
+.add {
+
+    width: 100px;
+
+    height: 44px;
+
+    padding: 12px, 5px, 12px, 5px !important;
+
+    border-radius: 8px;
+
+    gap: 10px;
+
+    background-color: #2D810E !important;
+
+    color: white !important;
+
+}
+
+.buttonplacement {
+
+    position: absolute;
+
+    bottom: 10px;
+
+    right: 10px;
+
+
+
+}
+
+
+
+.close-section {
+
+    margin-left: 10px;
+
+    margin-top: 10px;
+
+    height: 44px;
+
+    width: 44px;
+
+    background-color: #f3f3f3;
+
+    border-radius: 6px;
+
+    padding: 10px;
+
+    gap: 10px;
+
+    z-index: 1;
+
+}
+
+
+
+.close-section:hover {
+
+    background-color: #f3f3f3;
+
+    border-radius: 6px;
+
+    height: 44px;
+
+    width: 44px;
+
+    cursor: pointer;
+
+}
+
+
+
+
+
+
+
+.button {
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    margin: 10px;
+
+}
+
+
+
+.content:hover {
+
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.12);
+
+}
+
+
+
+.form-control {
+
+    font-size: 14px !important;
+
+}
+
+
+
+.txtclass {
+
+    text-indent: 10px !important;
+
+    font-size: 14px !important;
+
+    font-weight: 400 !important;
+
+    line-height: 2 !important;
+
+    color: #212529 !important;
+
+    background-color: #fff !important;
+
+    background-clip: padding-box !important;
+
+    border: 1px solid #ced4da !important;
+
+    -webkit-appearance: none !important;
+
+    appearance: none !important;
+
+    border-radius: .375rem !important;
+
+    height: 42px !important;
+
+}
+
+
+
+.inline {
+
+    display: flex;
+
+}
+
+
+
+.buttonplacement {
+
+    position: absolute;
+
+    bottom: 10px;
+
+    right: 10px;
+
+
+
+}
+
+
+
+.dropdown {
+
+    width: 100%;
+
+    padding-top: 5px;
+
+}
+
+
+
+.inputgap {
+
+    margin-right: 80px;
+
+}
+
+
+
+.long {
+
+    width: 100% !important;
+
+}
+
+
+
+.mid {
+
+    width: 50% !important;
+
+}
+
+
+
+.padtop20 {
+
+    padding-top: 20px;
+
+}
+
+
+
+.errorMessage {
+
+    color: red;
+
+}
+
+
+
+.padbottom {
+
+    padding-bottom: 25px;
+
+}
+
+
+
+.bottomborder {
+
+    border-bottom: 1px solid #e6e6e6;
+
+}
+
+
+
+.padtop5 {
+
+    padding-top: 5px;
+
+}
+
+
+
+.padtop10 {
+
+    padding-top: 10px;
+
+}
+
+
+
+.bold {
+
+    font-weight: 900;
+
+}
+
+
+
+
+
+.toggleheight {
+
+    height: 30px;
+
+}
+
+
+
+.width100 {
+
+    width: 100% !important;
+
+}
+
+
+
+.width95 {
+
+    width: 95% !important;
+
+}
+
+
+
+.tooltipsmaller {
+
+    height: 12px !important;
+
+    width: 20px !important;
+
+    line-height: 12px !important;
+
+    font-size: 12px !important;
+
+    padding-left: 2px !important;
+
+}
+
+
+
+.width80 {
+
+    width: 80%;
+
+}
+
+
+
+.error {
+
+    border: 1px solid red !important;
+
+}
+
+
+
+.add-buttons {
+
+    display: flex;
+
+    justify-content: space-between;
+
+}
+
+
+
+.fieldgap {
+
+    margin: 5px;
+
+}
+
+
+
+.radioOption {
+
+    font-size: 14px;
+
+    padding-right: 10px;
+
+}
+
+
+
+.radio {
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+
+
+.pad5 {
+
+    padding: 5px;
+
+    padding-left: 0px !important;
+
+}
+
+
+
+:host ::ng-deep .mat-mdc-radio-button .mdc-radio {
+
+    padding-left: 0px;
+
+}
