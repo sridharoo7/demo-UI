@@ -4,16 +4,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations"
-import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-import { MatIconModule } from '@anglar/material/icon';
 
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
-import { EmployeeModule } from './employee/employee.module';
 import { StudentModule } from './student/student.module';
 import { FriendModule } from './friend/friend.module';
-import { SharedModule } from './shared-module/shared.module';
-import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { EmployeeModule } from './employee/employee.module';
+import { StoreModule } from '@ngrx/store';
+import { employeeReducer } from './employee/store/employee.reducer';
 
 @NgModule({
   declarations: [
@@ -27,10 +25,7 @@ import { HttpClientModule } from '@angular/common/http';
     EmployeeModule,
     StudentModule,
     FriendModule,
-    SharedModule,
-    MatSlideToggleModule,
-    ReactiveFormsModule,
-    MatIconModule
+    StoreModule.forRoot({ empReducer: employeeReducer })
   ],
   providers: [
     provideAnimationsAsync()

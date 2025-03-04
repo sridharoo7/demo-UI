@@ -1,0 +1,210 @@
+<div class="main-container">
+    <!-- <mat-icon class="close-section" (click)="close()">close</mat-icon> -->
+    <div class="content">
+        <div class="container" [formGroup]="formGroup">
+            <div class="section">
+                <mat-label class="title">Create Employee</mat-label>
+            </div>
+            <div class="rows">
+                <div class="halfrow">
+                    <div class="padtop">
+                        <mat-label>First Name</mat-label>
+                        <mat-icon matTooltip="First Name" [matTooltipPosition]="toolTipPosition" class="tooltipsmaller">help</mat-icon>
+                    </div>
+                    <div class="padtop5">
+                        <input type="text" matInput id="fName" maxlength="25" minlength="3" placeholder="First Name"
+                            class="txtclass long inputgap" formControlName="firstName"
+                            [ngClass]="{'error': ((formGroup.get('firstName')?.invalid && formGroup.get('firstName')?.touched))}" />
+                        <mat-error *ngIf="formGroup.get('firstName')?.hasError('required') && formGroup?.get('firstName')?.touched">
+                            First Name is Required
+                        </mat-error>
+                        <mat-error *ngIf="formGroup.get('firstName')?.hasError('NaS') && formGroup?.get('firstName')?.touched">
+                            First Name should be a string
+                        </mat-error>
+                        <mat-error *ngIf="formGroup.get('firstName')?.hasError('minlength') && formGroup?.get('firstName')?.touched">
+                            First Name should be atleast of size 3
+                        </mat-error>
+                    </div>
+                </div>
+                <div class="halfrow">
+                    <div class="padtop">
+                        <mat-label>Last Name</mat-label>
+                        <mat-icon matTooltip="Last Name" [matTooltipPosition]="toolTipPosition" class="tooltipsmaller">help</mat-icon>
+                    </div>
+                    <div class="padtop5">
+                        <input type="text" matInput id="lName" maxlength="25" minlength="3" placeholder="Last Name"
+                            class="txtclass long inputgap" formControlName="lastName"
+                            [ngClass]="{'error': ((formGroup.get('lastName')?.invalid && formGroup.get('lastName')?.touched))}" />
+                        <mat-error *ngIf="formGroup.get('lastName')?.hasError('required') && formGroup?.get('lastName')?.touched">
+                            Last Name is Required
+                        </mat-error>
+                        <mat-error *ngIf="formGroup.get('lastName')?.hasError('NaS') && formGroup?.get('lastName')?.touched">
+                            Last Name should be a string
+                        </mat-error>
+                        <mat-error *ngIf="formGroup.get('lastName')?.hasError('minlength') && formGroup?.get('lastName')?.touched">
+                            Last Name should be atleast of size 3
+                        </mat-error>
+                    </div>
+                </div>
+            </div>
+            <div class="rows">
+                <div class="halfrow">
+                    <div class="padtop">
+                        <mat-label>Address 1</mat-label>
+                        <mat-icon matTooltip="Address 1" [matTooltipPosition]="toolTipPosition" class="tooltipsmaller">help</mat-icon>
+                    </div>
+                    <div class="padtop5">
+                        <input type="text" matInput id="Add1" maxlength="50" minlength="3" placeholder="Address 1"
+                            class="txtclass long inputgap" formControlName="address1"
+                            [ngClass]="{'error': ((formGroup.get('address1')?.invalid && formGroup.get('address1')?.touched))}" />
+                        <mat-error *ngIf="formGroup.get('address1')?.hasError('required') && formGroup?.get('address1')?.touched">
+                            Address 1 is Required
+                        </mat-error>
+                        <mat-error *ngIf="formGroup.get('address1')?.hasError('NaS') && formGroup?.get('address1')?.touched">
+                            Address 1 should be a string
+                        </mat-error>
+                        <mat-error *ngIf="formGroup.get('address1')?.hasError('minlength') && formGroup?.get('address1')?.touched">
+                            Address 1 should be atleast of size 3
+                        </mat-error>
+                    </div>
+                </div>
+                <div class="halfrow">
+                    <div class="padtop">
+                        <mat-label>Address 2</mat-label>
+                        <mat-icon matTooltip="Address 2" [matTooltipPosition]="toolTipPosition" class="tooltipsmaller">help</mat-icon>
+                    </div>
+                    <div class="padtop5">
+                        <input type="text" matInput id="add2" maxlength="50" minlength="0" placeholder="Address 2"
+                            class="txtclass long inputgap" formControlName="address2"
+                            [ngClass]="{'error': ((formGroup.get('lastName')?.invalid && formGroup.get('lastName')?.touched))}" />
+                        <mat-error *ngIf="formGroup.get('address2')?.hasError('string') && formGroup?.get('address2')?.touched">
+                            Address 2 is should be a string
+                        </mat-error>
+                    </div>
+                </div>
+            </div>
+            <div class="rows">
+                <div class="halfrow">
+                    <div class="padtop">
+                        <mat-label>City</mat-label>
+                        <mat-icon matTooltip="City" [matTooltipPosition]="toolTipPosition" class="tooltipsmaller">help</mat-icon>
+                    </div>
+                    <div class="padtop5">
+                        <input type="text" matInput id="city" maxlength="50" minlength="3" placeholder="City"
+                            class="txtclass long inputgap" formControlName="city"
+                            [ngClass]="{'error': ((formGroup.get('city')?.invalid && formGroup.get('city')?.touched))}" />
+                        <mat-error *ngIf="formGroup.get('city')?.hasError('required') && formGroup?.get('city')?.touched">
+                            City is Required
+                        </mat-error>
+                        <mat-error *ngIf="formGroup.get('city')?.hasError('Nas') && formGroup?.get('city')?.touched">
+                            City should be a string
+                        </mat-error>
+                        <mat-error *ngIf="formGroup.get('city')?.hasError('minlength') && formGroup?.get('city')?.touched">
+                            City should be atleast of size 3
+                        </mat-error>
+                    </div>
+                </div>
+                <div class="halfrow">
+                    <div class="padtop">
+                        <mat-label>State</mat-label>
+                        <mat-icon matTooltip="State" [matTooltipPosition]="toolTipPosition" class="tooltipsmaller">help</mat-icon>
+                    </div>
+                    <div class="padtop5">
+                        <input type="text" matInput id="state" maxlength="50" minlength="3" placeholder="State"
+                            class="txtclass long inputgap" formControlName="state"
+                            [ngClass]="{'error': ((formGroup.get('state')?.invalid && formGroup.get('state')?.touched))}" />
+                        <mat-error *ngIf="formGroup.get('state')?.hasError('required') && formGroup?.get('state')?.touched">
+                            State is Required
+                        </mat-error>
+                        <mat-error *ngIf="formGroup.get('state')?.hasError('NaS') && formGroup?.get('state')?.touched">
+                            State should be a string
+                        </mat-error>
+                        <mat-error *ngIf="formGroup.get('state')?.hasError('minlength') && formGroup?.get('state')?.touched">
+                            State should be atleast of size 3
+                        </mat-error>
+                    </div>
+                </div>
+            </div>
+            <div class="rows">
+                <div class="halfrow">
+                    <div class="padtop">
+                        <mat-label>Gender</mat-label>
+                        <mat-icon matTooltip="Gender" [matTooltipPosition]="toolTipPosition">help</mat-icon>
+                    </div>
+                    <div class="padtop5">
+                        <mat-form-field class="width95">
+                            <mat-select placeholder="--Select--" formControlName="gender">
+                                <mat-option value="">Select Gender</mat-option>
+                                <mat-option *ngFor="let gender of genders"
+                                    [value]="gender.id">{{gender.type}}</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                        <mat-error *ngIf="formGroup?.get('gender')?.invalid && formGroup?.get('gender')?.touched">
+                            Gender selection is required
+                        </mat-error>
+                    </div>
+                </div>
+                <div class="halfrow">
+                    <div class="padtop">
+                        <mat-label>Date Of Birth</mat-label>
+                        <mat-icon matTooltip="Date Of Birth" [matTooltipPosition]="toolTipPosition" class="tooltipsmaller">help</mat-icon>
+                    </div>
+                    <div class="padtop5">
+                        <input type="date" matInput id="dob" placeholder="Date Of Birth"
+                            class="txtclass long inputgap" formControlName="dob"
+                            [ngClass]="{'error': ((formGroup.get('dob')?.invalid && formGroup.get('dob')?.touched))}" />
+                        <mat-error *ngIf="formGroup.get('dob')?.hasError('required') && formGroup?.get('dob')?.touched">
+                            Date Of Birth is Required
+                        </mat-error>
+                    </div>
+                </div>
+            </div>
+            <div class="rows">
+                <div class="halfrow">
+                    <div class="padtop">
+                        <mat-label>Mobile</mat-label>
+                        <mat-icon matTooltip="Mobile" [matTooltipPosition]="toolTipPosition" class="tooltipsmaller">help</mat-icon>
+                    </div>
+                    <div class="padtop5">
+                        <input type="text" matInput id="mobile" maxlength="12" minlength="10" placeholder="Mobile"
+                            class="txtclass long inputgap" formControlName="mobile"
+                            [ngClass]="{'error': ((formGroup.get('mobile')?.invalid && formGroup.get('mobile')?.touched))}" />
+                        <mat-error *ngIf="formGroup.get('mobile')?.hasError('required') && formGroup?.get('mobile')?.touched">
+                            Mobile is Required
+                        </mat-error>
+                        <mat-error *ngIf="formGroup.get('mobile')?.hasError('NaN') && formGroup?.get('mobile')?.touched">
+                            Mobile should be a string
+                        </mat-error>
+                        <mat-error *ngIf="formGroup.get('mobile')?.hasError('minlength') && formGroup?.get('mobile')?.touched">
+                            Mobile should be atleast of size 10
+                        </mat-error>
+                    </div>
+                </div>
+                <div class="halfrow">
+                    <div class="padtop">
+                        <mat-label>Mail</mat-label>
+                        <mat-icon matTooltip="Mail" [matTooltipPosition]="toolTipPosition" class="tooltipsmaller">help</mat-icon>
+                    </div>
+                    <div class="padtop5">
+                        <input type="text" matInput id="Mail" maxlength="50" minlength="3" placeholder="Mail"
+                            class="txtclass long inputgap" formControlName="mail"
+                            [ngClass]="{'error': ((formGroup.get('mail')?.invalid && formGroup.get('mail')?.touched))}" />
+                        <mat-error *ngIf="formGroup.get('mail')?.hasError('required') && formGroup?.get('mail')?.touched">
+                            Mail is Required
+                        </mat-error>
+                        <mat-error *ngIf="formGroup.get('mail')?.hasError('email') && formGroup?.get('mail')?.touched">
+                            Mail should be in proper format
+                        </mat-error>
+                        <mat-error *ngIf="formGroup.get('mail')?.hasError('minlength') && formGroup?.get('mail')?.touched">
+                            Mail should be atleast of size 3
+                        </mat-error>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="buttonplacement">
+            <button [ngClass]="{'greyButton':formGroup.invalid, 'greenButton': !formGroup.invalid}" mat-button (click)="onSave()"
+                [disabled]="formGroup.invalid">Save</button>
+        </div>
+    </div>
+</div>
