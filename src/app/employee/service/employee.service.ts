@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { IEmployee } from '../model/employee.model';
 import { createEmployee, editEmployee, getEmployees, removeEmployee } from '../store/employee.actions';
-import { Observable } from 'rxjs';
+import { IEmployeeStore } from '../store/employee.store';
 
 @Injectable({
   providedIn: 'root'
@@ -10,11 +10,7 @@ import { Observable } from 'rxjs';
 export class EmployeeService {
 
   constructor(private store: Store<{
-    empReducer: {
-      employees: IEmployee[],
-      lastId: number,
-      count: number
-    }
+    empReducer: IEmployeeStore
   }>) { 
     this.getEmployee();
   }
@@ -28,6 +24,7 @@ export class EmployeeService {
   }
 
   onDelete(id: number) {
+    console.log(id);
     this.store.dispatch(removeEmployee({id}));
   }
 

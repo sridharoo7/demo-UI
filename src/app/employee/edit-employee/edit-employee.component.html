@@ -1,9 +1,9 @@
 <div class="main-container">
-    <!-- <mat-icon class="close-section" (click)="close()">close</mat-icon> -->
+    <mat-icon class="close-section" (click)="close()">close</mat-icon>
     <div class="content">
         <div class="container bottonborder" [formGroup]="formGroup">
             <div class="section">
-                <mat-label class="title">Create Employee</mat-label>
+                <mat-label class="title">Edit Employee</mat-label>
             </div>
             <div class="rows">
                 <div class="halfrow">
@@ -136,7 +136,7 @@
                             <mat-select placeholder="--Select--" formControlName="gender">
                                 <mat-option value="">Select Gender</mat-option>
                                 <mat-option *ngFor="let gender of genders"
-                                    [value]="gender.id">{{gender.type}}</mat-option>
+                                    [value]="gender.value">{{gender.type}}</mat-option>
                             </mat-select>
                         </mat-form-field>
                         <mat-error *ngIf="formGroup?.get('gender')?.invalid && formGroup?.get('gender')?.touched">

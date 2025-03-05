@@ -15,7 +15,7 @@ export class CreateEmployeeComponent implements OnInit {
 
   formGroup!: FormGroup;
   toolTipPosition: TooltipPosition = "after";
-  genders = [{ id: 1, type: 'Male' }, { id: 2, type: 'Female' }, { id: 3, type: 'other' }];
+  genders = [{ value: 'Male', type: 'Male' }, { value: 'Female', type: 'Female' }, { value: 'Other', type: 'Other' }];
 
 
   constructor(private fb: FormBuilder, private empService: EmployeeService, private router:Router) {
@@ -58,16 +58,12 @@ export class CreateEmployeeComponent implements OnInit {
       }
       this.empService.onCreate(model);
       idSub.unsubscribe();
-      let sub = this.empService.getEmployeeById(id-1).subscribe(x=> {
-        console.log(x);
-      });
-      sub.unsubscribe();
      }
-     //this.router.navigate("./");
+     this.router.navigate(["/employee"]);
   }
 
   close() {
-    // this.router.navigate("./");
+    this.router.navigate(["/employee"]);
   }
 
 }

@@ -30,7 +30,8 @@ import { SharedModule } from '../shared-module/shared.module';
     MatSelectModule,
     MatTooltipModule,
     ReactiveFormsModule,
-    SharedModule
+    SharedModule,
+    StoreModule.forFeature( 'empReducer', employeeReducer )
   ],
   exports: [
     EmployeeDashboardComponent,

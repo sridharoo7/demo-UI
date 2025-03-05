@@ -1,10 +1,16 @@
 <div class="main-container">
     <div class="content">
         <div class="container">
-            <div class="section">
-                <mat-label class="title">Employee List</mat-label>
+            <div style="justify-content: flex-end; display: flex;">
+                <div class="section">
+                    <mat-label class="title">Employee List</mat-label>
+                </div>
+                <div class="buttonplacement">
+                    <button class="greenButton" mat-button (click)="addEmployee()"
+                        >Add Employee</button>
+                </div>
             </div>
-            <app-grid [dataSource]="empList" [displayedColumns]="displayedColumns"></app-grid>
+            <app-grid [dataSource]="empList$ | async" [displayedColumns]="displayedColumns" (editEvent)="onEdit($event)" (deleteEvent)="onDelete($event)"></app-grid>
         </div>
     </div>
 </div>

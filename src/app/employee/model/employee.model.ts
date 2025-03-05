@@ -6,7 +6,7 @@ export interface IEmployee{
     address2: string;
     city: string;
     state:  string;
-    gender: number;
+    gender: string;
     dob: string;
     mobile: string;
     mail: string;

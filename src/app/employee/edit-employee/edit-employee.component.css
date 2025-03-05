@@ -187,8 +187,8 @@
 .close-section {
     margin-left: 10px;
     margin-top: 10px;
-    height: 44px;
-    width: 44px;
+    height: 25px;
+    width: 25px;
     background-color: #f3f3f3;
     border-radius: 6px;
     padding: 10px;
@@ -199,8 +199,8 @@
 .close-section:hover {
     background-color: #f3f3f3;
     border-radius: 6px;
-    height: 44px;
-    width: 44px;
+    height: 25px;
+    width: 25px;
     cursor: pointer;
 }
 

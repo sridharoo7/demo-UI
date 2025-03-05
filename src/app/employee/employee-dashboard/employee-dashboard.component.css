@@ -44,3 +44,17 @@
     padding-bottom: 20px;
     gap: 20px;
 }
+
+.buttonplacement {
+    position: relative;
+    padding-top: 50px;
+}
+
+
+.greenButton {
+    color: white !important;
+    background-color: #2D810E !important;
+    width: 100px;
+    height: 40px;
+    cursor: pointer;
+}

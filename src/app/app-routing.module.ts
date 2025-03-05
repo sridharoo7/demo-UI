@@ -8,10 +8,6 @@ const routes: Routes = [
     loadChildren : () =>import("./employee/employee.module").then(x=>x.EmployeeModule)
   },
   {
-    path: 'friend',
-    loadChildren: () => import("./friend/friend.module").then(x => x.FriendModule)
-  },
-  {
     path: '',
     component: AppComponent
   }
