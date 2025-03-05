@@ -1,6 +1,5 @@
 import { Component, OnInit, model } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { TooltipPosition } from '@angular/material/tooltip';
 import { numberValidator, stringValidator } from '../../shared-module/validators/data-validation';
 import { IEmployee } from '../model/employee.model';
 import { EmployeeService } from '../service/employee.service';
@@ -14,7 +13,6 @@ import { Router } from '@angular/router';
 export class CreateEmployeeComponent implements OnInit {
 
   formGroup!: FormGroup;
-  toolTipPosition: TooltipPosition = "after";
   genders = [{ value: 'Male', type: 'Male' }, { value: 'Female', type: 'Female' }, { value: 'Other', type: 'Other' }];
 
 

@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
-import { TooltipPosition } from '@angular/material/tooltip';
 import { stringValidator, numberValidator } from '../../shared-module/validators/data-validation';
 import { ActivatedRoute, Router } from '@angular/router';
 import { EmployeeService } from '../service/employee.service';
@@ -14,7 +13,6 @@ import { IEmployee } from '../model/employee.model';
 export class EditEmployeeComponent implements OnInit{
 
   formGroup!: FormGroup;
-  toolTipPosition: TooltipPosition = "after";
   genders = [{ value: 'Male', type: 'Male' }, { value: 'Female', type: 'Female' }, { value: 'Other', type: 'Other' }];
   employee!: IEmployee;
   constructor(private fb: FormBuilder, private router: Router, private activatedRoute: ActivatedRoute, private empService: EmployeeService) {
@@ -40,7 +38,8 @@ export class EditEmployeeComponent implements OnInit{
       dob: new FormControl(this.employee.dob,[Validators.required]),
       mobile: new FormControl(this.employee.mobile,[Validators.required, numberValidator]),
       mail: new FormControl(this.employee.mail,[Validators.required, Validators.email, stringValidator])
-    })
+    });
+    empDataSub.unsubscribe();
   }
 
   onUpdate() {
